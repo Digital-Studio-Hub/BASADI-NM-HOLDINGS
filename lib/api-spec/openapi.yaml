@@ -10,6 +10,18 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: products
+    description: Product catalog operations
+  - name: categories
+    description: Category operations
+  - name: collections
+    description: Curated collection operations
+  - name: home
+    description: Homepage aggregate operations
+  - name: testimonials
+    description: Customer testimonial operations
+  - name: leads
+    description: Newsletter and contact lead capture
 paths:
   /healthz:
     get:
@@ -24,6 +36,279 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /products:
+    get:
+      operationId: listProducts
+      tags: [products]
+      summary: List products
+      description: List products with optional filtering, search and sorting.
+      parameters:
+        - name: category
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by category slug
+        - name: collection
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by collection slug
+        - name: search
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Free text search across name and description
+        - name: size
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by size
+        - name: color
+          in: query
+          required: false
+          schema:
+            type: string
+          description: Filter by colour
+        - name: minPrice
+          in: query
+          required: false
+          schema:
+            type: number
+          description: Minimum sale price
+        - name: maxPrice
+          in: query
+          required: false
+          schema:
+            type: number
+          description: Maximum sale price
+        - name: sort
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [newest, price_asc, price_desc, name_asc, best_selling]
+          description: Sort order
+      responses:
+        "200":
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /products/{id}:
+    get:
+      operationId: getProduct
+      tags: [products]
+      summary: Get a product by id
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A product
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /products/{id}/related:
+    get:
+      operationId: getRelatedProducts
+      tags: [products]
+      summary: Get related products
+      description: Returns products related to the given product (same category).
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Related products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+
+  /categories:
+    get:
+      operationId: listCategories
+      tags: [categories]
+      summary: List categories
+      responses:
+        "200":
+          description: A list of categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Category"
+
+  /categories/{slug}:
+    get:
+      operationId: getCategory
+      tags: [categories]
+      summary: Get a category by slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A category
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Category"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /collections:
+    get:
+      operationId: listCollections
+      tags: [collections]
+      summary: List curated collections
+      responses:
+        "200":
+          description: A list of collections
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Collection"
+
+  /collections/{slug}:
+    get:
+      operationId: getCollection
+      tags: [collections]
+      summary: Get a collection by slug
+      parameters:
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: A collection
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Collection"
+        "404":
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /home/summary:
+    get:
+      operationId: getHomeSummary
+      tags: [home]
+      summary: Homepage aggregate
+      description: Returns curated product groupings for the homepage.
+      responses:
+        "200":
+          description: Homepage summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HomeSummary"
+
+  /testimonials:
+    get:
+      operationId: listTestimonials
+      tags: [testimonials]
+      summary: List customer testimonials
+      responses:
+        "200":
+          description: A list of testimonials
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Testimonial"
+
+  /newsletter:
+    post:
+      operationId: subscribeNewsletter
+      tags: [leads]
+      summary: Subscribe to the newsletter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NewsletterInput"
+      responses:
+        "201":
+          description: Subscribed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeadResult"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
+  /contact:
+    post:
+      operationId: submitContact
+      tags: [leads]
+      summary: Submit a contact enquiry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContactInput"
+      responses:
+        "201":
+          description: Submitted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LeadResult"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+
 components:
   schemas:
     HealthStatus:
@@ -34,3 +319,209 @@ components:
       required:
         - status
 
+    Error:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+
+    Product:
+      type: object
+      required:
+        - id
+        - code
+        - name
+        - slug
+        - description
+        - category
+        - categoryName
+        - originalPrice
+        - salePrice
+        - images
+        - sizes
+        - colors
+        - isNewArrival
+        - isBestSeller
+        - isTrending
+        - featured
+        - rating
+        - reviewCount
+      properties:
+        id:
+          type: string
+        code:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        description:
+          type: string
+        features:
+          type: array
+          items:
+            type: string
+        category:
+          type: string
+        categoryName:
+          type: string
+        originalPrice:
+          type: number
+        salePrice:
+          type: number
+        images:
+          type: array
+          items:
+            type: string
+        sizes:
+          type: array
+          items:
+            type: string
+        colors:
+          type: array
+          items:
+            type: string
+        isNewArrival:
+          type: boolean
+        isBestSeller:
+          type: boolean
+        isTrending:
+          type: boolean
+        featured:
+          type: boolean
+        rating:
+          type: number
+        reviewCount:
+          type: integer
+
+    Category:
+      type: object
+      required:
+        - slug
+        - name
+        - description
+        - image
+        - productCount
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        productCount:
+          type: integer
+
+    Collection:
+      type: object
+      required:
+        - slug
+        - name
+        - description
+        - image
+        - productCount
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        productCount:
+          type: integer
+
+    Testimonial:
+      type: object
+      required:
+        - id
+        - name
+        - location
+        - rating
+        - quote
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        location:
+          type: string
+        rating:
+          type: integer
+        quote:
+          type: string
+
+    HomeSummary:
+      type: object
+      required:
+        - newArrivals
+        - bestSellers
+        - trending
+        - featuredCollections
+      properties:
+        newArrivals:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        bestSellers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        trending:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+        featuredCollections:
+          type: array
+          items:
+            $ref: "#/components/schemas/Collection"
+
+    NewsletterInput:
+      type: object
+      required:
+        - email
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+          minLength: 3
+
+    ContactInput:
+      type: object
+      required:
+        - name
+        - email
+        - message
+      properties:
+        name:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          format: email
+          minLength: 3
+        phone:
+          type: string
+        subject:
+          type: string
+        message:
+          type: string
+          minLength: 1
+
+    LeadResult:
+      type: object
+      required:
+        - success
+        - message
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string

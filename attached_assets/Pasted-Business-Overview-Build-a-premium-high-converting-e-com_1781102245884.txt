@@ -1,0 +1,583 @@
+Business Overview
+Build a premium, high-converting e-commerce fashion website for Modern Muse by Basadi NM Holdings, a South African dropshipping fashion and lifestyle brand specializing in women’s clothing, handbags, accessories, jewellery, footwear, perfumes, and fashion essentials sourced from international suppliers.
+
+The website must position Modern Muse as a modern, sophisticated, affordable luxury fashion destination for South African women.
+
+Brand Name: Modern Muse
+Parent Company: Basadi NM Holdings
+Domain: https://modernmusebasadiholdings.co.za
+Business Type: E-Commerce / Dropshipping Fashion Store
+Location: South Africa (Nationwide Delivery)
+Contact Email: info@modernmuse.co.za
+WhatsApp: 076 757 8783 / 069 725 0622
+Google Analytics: G-29DH2J35CJ
+
+Brand Positioning
+Modern Muse must be positioned as:
+
+Fashion-forward
+
+Modern
+
+Sophisticated
+
+Feminine
+
+Trend-driven
+
+Accessible luxury
+
+Affordable elegance
+
+The website should feel similar to:
+
+Zara
+
+H&M
+
+SHEIN Premium Collections
+
+Superbalist
+
+Forever New
+
+Poetry
+
+But with its own premium South African boutique identity.
+
+Core Business Model
+Modern Muse operates as a:
+
+Dropshipping Fashion Marketplace
+Products are sourced from international suppliers and shipped to customers through the Modern Muse brand.
+
+The website must be structured to:
+
+Handle large product catalogs
+
+Easily add products
+
+Support inventory updates
+
+Support future supplier integrations
+
+Support future marketplace expansion
+
+Target Market
+Primary Audience
+Women aged:
+
+18-45
+Fashion interests:
+
+Casual fashion
+
+Modern fashion
+
+Workwear
+
+Lifestyle fashion
+
+Accessories
+
+Handbags
+
+Jewellery
+
+Beauty
+
+Affordable luxury
+
+WEBSITE STRUCTURE
+/
+├── Home
+├── Shop
+│   ├── Dresses
+│   ├── Co-Ord Sets
+│   ├── Jackets & Outerwear
+│   ├── Tops
+│   ├── Pants
+│   ├── Swimwear
+│   ├── Handbags
+│   ├── Accessories
+│   ├── Jewellery
+│   ├── Perfumes
+│   └── New Arrivals
+├── Collections
+├── About Modern Muse
+├── Shipping & Returns
+├── FAQ
+├── Contact Us
+├── Privacy Policy
+├── Terms & Conditions
+└── Affiliate / Rewards (Future)
+
+HOMEPAGE DESIGN
+Hero Section
+Headline:
+
+Fashion That Moves With You
+Subheadline:
+
+Discover carefully curated fashion, accessories, and lifestyle essentials designed for the modern South African woman.
+
+Buttons:
+
+Shop New Arrivals
+
+Shop Collections
+
+Hero imagery:
+
+Luxury editorial fashion photography
+
+Diverse South African women
+
+Premium lifestyle visuals
+
+Featured Collections
+Show:
+
+New Arrivals
+Best Sellers
+Trending Now
+Handbags Collection
+Jewellery Collection
+Fashion Essentials
+Why Shop Modern Muse
+Icons:
+
+Nationwide Delivery
+Secure Checkout
+Curated Fashion
+Trusted Suppliers
+Dedicated Support
+WhatsApp Assistance
+Fashion Categories
+Large image category blocks:
+
+Dresses
+
+Co-Ords
+
+Jackets
+
+Handbags
+
+Jewellery
+
+Accessories
+
+Perfumes
+
+Customer Testimonials
+Modern, trust-building carousel.
+
+Newsletter Section
+Headline:
+
+Join The Modern Muse Community
+Capture:
+
+Name
+
+Email
+
+Integrate with future email marketing.
+
+SHOP STRUCTURE
+Clothing Categories
+Dresses
+Products:
+
+V Neck Sleeveless Swing Dress
+
+Denim Shirt Dress
+
+Floral Print Pleated Dress
+
+Digital Print Pleated Dress
+
+Co-Ord Sets
+Products:
+
+Stripe Pant Co-Ord Set
+
+Wide Leg Pants Co-Ord Set
+
+Linen Shorts Co-Ord Set
+
+Jackets & Outerwear
+Products:
+
+Denim Jacket
+
+Hooded Windbreaker
+
+Mesh Coat
+
+Tops
+Products:
+
+Knitted Short Sleeve Top
+
+Tropical T-Shirt
+
+Casual Tops
+
+Pants
+Products:
+
+Retro Linen Pants
+
+Wide Leg Fashion Pants
+
+Swimwear
+Products:
+
+Women’s Beach One Piece Swimwear
+HANDBAGS COLLECTION
+Include:
+
+PU Leather Shoulder Bags
+
+Fashion Handbags
+
+Clutch Bags
+
+Underarm Bags
+
+Dumpling Bags
+
+Bible Bags
+
+Crossbody Bags
+
+Luxury presentation style.
+
+JEWELLERY COLLECTION
+Include:
+
+Earrings
+
+Necklaces
+
+Bracelets
+
+Rings
+
+Jewellery Sets
+
+Premium product cards.
+
+ACCESSORIES COLLECTION
+Include:
+
+Bag Charms
+
+Keychains
+
+Fashion Accessories
+
+Phone Accessories
+
+PERFUME COLLECTION
+Create structure for future perfume inventory.
+
+Premium fragrance-inspired design.
+
+PRODUCT PAGE DESIGN
+Each product page must contain:
+
+Product Gallery
+Multiple images
+
+Zoom functionality
+
+Mobile swipe gallery
+
+Product Information
+Product Name
+
+Product Description
+
+Product Features
+
+Size Guide (where applicable)
+
+Pricing
+Display:
+
+Original Price
+
+Sale Price
+
+Savings Percentage
+
+Example:
+
+R420 → R360
+
+Purchase Section
+Buttons:
+
+Add To Cart
+
+Buy Now
+
+WhatsApp Enquiry
+
+Related Products
+AI-powered recommendations.
+
+E-COMMERCE FUNCTIONALITY
+Required Features
+Shopping Cart
+Secure Checkout
+Order Tracking
+Wishlist
+Customer Accounts
+Guest Checkout
+Product Search
+Product Filters
+Filters:
+
+Category
+
+Price
+
+Size
+
+Colour
+
+New Arrivals
+
+Best Sellers
+
+PAYMENT GATEWAYS
+Integrate:
+
+PayFast
+
+Peach Payments
+
+Ozow
+
+Yoco Online
+
+Primary recommendation:
+
+PayFast
+
+WHATSAPP INTEGRATION
+Floating WhatsApp button on all pages.
+
+Numbers:
+
+076 757 8783
+
+069 725 0622
+
+Functions:
+
+Product enquiry
+
+Order assistance
+
+Delivery questions
+
+ABOUT PAGE
+Story positioning:
+
+Modern Muse is more than a fashion store.
+
+We curate stylish, affordable fashion and lifestyle products sourced from trusted international suppliers and made accessible to South African women who value style, confidence, and self-expression.
+
+SHIPPING & RETURNS
+Create professional pages covering:
+
+Delivery times
+
+Returns process
+
+Refund policy
+
+Exchange policy
+
+Dropshipping fulfillment process
+
+SEO STRATEGY
+Target Keywords
+Primary:
+
+Women’s fashion South Africa
+
+Online clothing store South Africa
+
+Women’s handbags South Africa
+
+Fashion accessories online
+
+Affordable women’s fashion
+
+Secondary:
+
+Women’s jewellery South Africa
+
+Online boutique South Africa
+
+Dresses South Africa
+
+Women’s perfumes South Africa
+
+SCHEMA IMPLEMENTATION
+Implement:
+
+Organization Schema
+
+Product Schema
+
+Breadcrumb Schema
+
+FAQ Schema
+
+Review Schema
+
+Ecommerce Schema
+
+DESIGN SYSTEM
+Premium Colour Palette
+Soft Ivory
+#FAF8F5
+
+Primary background
+
+Warm Beige
+#E8DCCF
+
+Luxury accent
+
+Champagne Gold
+#D4B483
+
+Premium highlights
+
+Deep Charcoal
+#2B2B2B
+
+Typography
+
+Rose Nude
+#D9A5A5
+
+Feminine accent
+
+Soft Taupe
+#B8A999
+
+Secondary sections
+
+TYPOGRAPHY
+Headings:
+
+Playfair Display
+Body:
+
+Inter
+
+Poppins
+
+Buttons:
+
+Montserrat
+IMAGES & MEDIA
+Use:
+
+Luxury fashion photography
+
+Editorial fashion imagery
+
+Lifestyle imagery
+
+Product photography
+
+Boutique-style visuals
+
+Requirements:
+
+WebP optimization
+
+Lazy loading
+
+Responsive images
+
+SEO alt text
+
+LEAD GENERATION FEATURES (MANDATORY)
+Floating WhatsApp
+Newsletter Signup
+Abandoned Cart Recovery
+Exit Intent Capture
+Wishlist Creation
+Product Recommendations
+Recently Viewed Products
+Product Reviews
+Trust Badges
+Secure Checkout Indicators
+GOOGLE ANALYTICS
+Install:
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-29DH2J35CJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-29DH2J35CJ');
+</script>
+
+Track:
+
+Product views
+
+Add to cart
+
+Checkout initiated
+
+Purchases
+
+WhatsApp clicks
+
+Newsletter signups
+
+Wishlist additions
+
+TECHNICAL REQUIREMENTS
+Mobile-first design
+
+Core Web Vitals optimized
+
+Under 2-second load times
+
+Advanced product filtering
+
+SEO optimized architecture
+
+Schema implementation
+
+CMS product management
+
+Inventory management
+
+Cart recovery
+
+Analytics integration
+
+Search Console ready
+
+XML sitemap
+
+Robots.txt
+
+SSL security

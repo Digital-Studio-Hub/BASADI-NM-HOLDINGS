@@ -1,0 +1,2 @@
+- [Express 5 + Drizzle quirks](express5-drizzle.md) — path params typed string|string[]; drizzle-kit push needs TTY for constraints.
+- [Modern Muse storefront](modern-muse.md) — contract-first fashion e-commerce; key conventions and where logic lives.

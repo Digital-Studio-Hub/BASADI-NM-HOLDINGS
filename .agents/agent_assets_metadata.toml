@@ -1,0 +1,140 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "Ob3dTJxW8xQnBCgUpjSvt"
+uri = "file://artifacts/modern-muse/public/assets/hero.png"
+type = "image"
+title = "Hero fashion lookbook"
+
+[[generated]]
+id = "NrjahFP0610YMMvTZjwex"
+uri = "file://artifacts/modern-muse/public/assets/category-clothing.png"
+type = "image"
+title = "Womens clothing category"
+
+[[generated]]
+id = "EwQF9sMXlX4_-g43ynl9I"
+uri = "file://artifacts/modern-muse/public/assets/category-handbags.png"
+type = "image"
+title = "Handbags category"
+
+[[generated]]
+id = "USssiiqkn3Gp_86ar20rK"
+uri = "file://artifacts/modern-muse/public/assets/category-jewellery.png"
+type = "image"
+title = "Jewellery category"
+
+[[generated]]
+id = "x75cIdCBIBniFcGVU1BtL"
+uri = "file://artifacts/modern-muse/public/assets/collection-summer.png"
+type = "image"
+title = "Summer collection cover"
+
+[[generated]]
+id = "urgzYKT42LNZwZJ4rnXU2"
+uri = "file://artifacts/modern-muse/public/assets/collection-workwear.png"
+type = "image"
+title = "Workwear collection cover"
+
+[[generated]]
+id = "YnPjQo814sMtOzo_fq9Q7"
+uri = "file://artifacts/modern-muse/public/assets/collection-evening.png"
+type = "image"
+title = "Evening wear collection cover"
+
+[[generated]]
+id = "wXSE8FucSluwbg0zOWNXp"
+uri = "file://attached_assets/generated_images/mm_dress_floral.png"
+type = "image"
+title = "floral midi dress"
+
+[[generated]]
+id = "pDkTk8PntVtgPU3v3gF8g"
+uri = "file://attached_assets/generated_images/mm_dress_denim.png"
+type = "image"
+title = "denim shirt dress"
+
+[[generated]]
+id = "oVcwViCxHvS3KwExb4KpW"
+uri = "file://attached_assets/generated_images/mm_dress_pleated.png"
+type = "image"
+title = "pleated dress"
+
+[[generated]]
+id = "YpZ0GjvHMfB607d12XzDl"
+uri = "file://attached_assets/generated_images/mm_coord.png"
+type = "image"
+title = "coord set"
+
+[[generated]]
+id = "RPzp8iiOOiZexxzqERK5M"
+uri = "file://attached_assets/generated_images/mm_jacket.png"
+type = "image"
+title = "windbreaker jacket"
+
+[[generated]]
+id = "CmiLigZppHsumWzzQxIz4"
+uri = "file://attached_assets/generated_images/mm_top.png"
+type = "image"
+title = "knitted top"
+
+[[generated]]
+id = "aJMot6jiqrxBmMWlNZk2i"
+uri = "file://attached_assets/generated_images/mm_pants.png"
+type = "image"
+title = "wide leg pants"
+
+[[generated]]
+id = "eedU7UtZy2dXA4jQ-WYR0"
+uri = "file://attached_assets/generated_images/mm_swim.png"
+type = "image"
+title = "one piece swimwear"
+
+[[generated]]
+id = "a72d2PEUQK191CBxpTarx"
+uri = "file://attached_assets/generated_images/mm_bag_shoulder.png"
+type = "image"
+title = "leather shoulder bag"
+
+[[generated]]
+id = "rDdGq8NedKFsUjqFc2r_B"
+uri = "file://attached_assets/generated_images/mm_bag_clutch.png"
+type = "image"
+title = "evening clutch bag"
+
+[[generated]]
+id = "EEXyRStz-HY0dKt3IgB7g"
+uri = "file://attached_assets/generated_images/mm_bag_crossbody.png"
+type = "image"
+title = "crossbody bag"
+
+[[generated]]
+id = "1WN1sqfpNFkf_7MaJ2LxA"
+uri = "file://attached_assets/generated_images/mm_jewel_set.png"
+type = "image"
+title = "gold jewellery set"
+
+[[generated]]
+id = "YhwgvLgofidttpgIQ2qm-"
+uri = "file://attached_assets/generated_images/mm_jewel_earrings.png"
+type = "image"
+title = "gold hoop earrings"
+
+[[generated]]
+id = "Bj_RFPM5vNEIWVtI11PMu"
+uri = "file://attached_assets/generated_images/mm_perfume.png"
+type = "image"
+title = "luxury perfume bottle"
+
+[[generated]]
+id = "7LpE1IqMGpKpdPGgDm71Z"
+uri = "file://attached_assets/generated_images/mm_accessory.png"
+type = "image"
+title = "bag charm accessory"
+
+[[generated]]
+id = "LKIlaIYEINGJrRyXKCJut"
+uri = "file://attached_assets/generated_images/mm_top2.png"
+type = "image"
+title = "casual summer top"
