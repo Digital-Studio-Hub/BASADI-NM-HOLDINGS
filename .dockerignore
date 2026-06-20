@@ -1,0 +1,14 @@
+.git
+.gitignore
+node_modules
+**/node_modules
+**/.turbo
+**/.cache
+**/.DS_Store
+**/*.log
+pnpm-store
+.vscode
+.local
+.artifacts
+.agents
+attached_assets/generated_images
