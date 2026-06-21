@@ -27,3 +27,4 @@ const server = app.listen(port, (err) => {
 server.on("error", (err) => {
   logger.error({ err }, "Server error");
   process.exit(1);
+});
