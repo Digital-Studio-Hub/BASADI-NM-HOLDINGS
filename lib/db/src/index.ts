@@ -1,15 +1,14 @@
 import { drizzle } from "drizzle-orm/node-postgres";
 import pg from "pg";
 import * as schema from "./schema";
-import { logger } from "pino";
 
 const { Pool } = pg;
 
 let pool: pg.Pool | null = null;
-let db: ReturnType<typeof drizzle> | null = null;
+let drizzleDb: ReturnType<typeof drizzle> | null = null;
 
 function initializeDatabase() {
-  if (pool) return { pool, db };
+  if (pool && drizzleDb) return { pool, db: drizzleDb };
 
   if (!process.env.DATABASE_URL) {
     const msg = "DATABASE_URL is not set. Database queries will fail.";
@@ -18,30 +17,35 @@ function initializeDatabase() {
   }
 
   pool = new Pool({ connectionString: process.env.DATABASE_URL });
-  db = drizzle(pool, { schema });
+  drizzleDb = drizzle(pool, { schema });
   console.info("Database initialized");
-  return { pool, db };
+  return { pool, db: drizzleDb };
 }
 
 export function getDatabase() {
   return initializeDatabase();
 }
 
-// Lazy initialization on first access
-Object.defineProperty(exports, "pool", {
-  get: () => {
+export const exportedPool = new Proxy({} as pg.Pool, {
+  get(_target, prop, receiver) {
     const { pool: p } = initializeDatabase();
     if (!p) throw new Error("DATABASE_URL must be set to use database");
-    return p;
+
+    const value = Reflect.get(p as object, prop, receiver);
+    return typeof value === "function" ? value.bind(p) : value;
   },
 });
 
-Object.defineProperty(exports, "db", {
-  get: () => {
+export const db = new Proxy({} as NonNullable<ReturnType<typeof drizzle>>, {
+  get(_target, prop, receiver) {
     const { db: d } = initializeDatabase();
     if (!d) throw new Error("DATABASE_URL must be set to use database");
-    return d;
+
+    const value = Reflect.get(d as object, prop, receiver);
+    return typeof value === "function" ? value.bind(d) : value;
   },
 });
+
+export { exportedPool as pool };
 
 export * from "./schema";
