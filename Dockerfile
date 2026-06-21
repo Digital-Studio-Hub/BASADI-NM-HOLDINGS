@@ -39,6 +39,7 @@ RUN pnpm install --frozen-lockfile --prod --filter @workspace/api-server... --co
 
 COPY --from=builder /app/artifacts/api-server/dist ./artifacts/api-server/dist
 COPY --from=builder /app/artifacts/modern-muse/dist/public ./artifacts/modern-muse/dist/public
+COPY --from=builder /app/attached_assets ./attached_assets
 
 EXPOSE 8080
 CMD ["node", "--enable-source-maps", "artifacts/api-server/dist/index.mjs"]
