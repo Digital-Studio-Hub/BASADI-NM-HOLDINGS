@@ -99,11 +99,22 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-sm text-muted-foreground order-3 md:order-1 text-center md:text-left">
+          <div className="order-1 md:order-1 flex flex-col items-center gap-2">
+            <Link to="/" className="hover:opacity-80 transition-opacity">
+              <img 
+                src="/brand/modern-muse-logo-white.png" 
+                alt="Modern Muse" 
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
+            <span className="text-xs text-muted-foreground font-medium">Modern Muse</span>
+          </div>
+          
+          <p className="text-sm text-muted-foreground order-3 md:order-2 text-center md:text-center">
             © 2024 Modern Muse by Basadi NM Holdings
           </p>
           
-          <div className="order-1 md:order-2 flex flex-col items-center gap-2">
+          <div className="order-2 md:order-3 flex flex-col items-center gap-2">
             <a href="https://lekker.network/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
               <img 
                 src="/brand/lekker-network-logo.png" 
@@ -115,7 +126,7 @@ export function Footer() {
             <span className="text-xs text-muted-foreground">Powered by Lekker Network</span>
           </div>
 
-          <div className="order-2 md:order-3 flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="order-4 md:order-4 flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="/terms-conditions" className="hover:text-primary transition-colors">Terms of Service</Link>
             <span>|</span>
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>

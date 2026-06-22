@@ -36,7 +36,11 @@ export function Header() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center flex-1 lg:flex-none">
-          <span className="font-serif text-2xl font-bold text-foreground tracking-wide">Modern Muse</span>
+          <img 
+            src="/brand/modern-muse-logo-color.png" 
+            alt="Modern Muse" 
+            className="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
+          />
         </Link>
 
         {/* Desktop Nav */}
