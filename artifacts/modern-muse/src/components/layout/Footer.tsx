@@ -102,7 +102,7 @@ export function Footer() {
           <div className="order-1 md:order-1 flex flex-col items-center gap-2">
             <Link href="/" className="hover:opacity-80 transition-opacity">
               <img 
-                src="/brand/modern-muse-logo-white.svg" 
+                src="/brand/modern-muse-logo-white.png" 
                 alt="Modern Muse" 
                 className="h-10 w-auto object-contain"
               />

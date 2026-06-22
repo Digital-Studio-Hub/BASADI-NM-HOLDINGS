@@ -37,7 +37,7 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center justify-center flex-1 lg:flex-none">
           <img
-            src="/brand/modern-muse-logo-black.svg"
+            src="/brand/modern-muse-logo-black.png"
             alt="Modern Muse"
             className="h-12 w-auto object-contain hover:opacity-80 transition-opacity"
           />
