@@ -39,7 +39,10 @@ RUN pnpm install --frozen-lockfile --prod --filter @workspace/api-server... --co
 
 COPY --from=builder /app/artifacts/api-server/dist ./artifacts/api-server/dist
 COPY --from=builder /app/artifacts/modern-muse/dist/public ./artifacts/modern-muse/dist/public
+# Ensure all public assets are copied for runtime serving
 COPY --from=builder /app/artifacts/modern-muse/public/brand ./artifacts/modern-muse/dist/public/brand
+COPY --from=builder /app/artifacts/modern-muse/public/assets ./artifacts/modern-muse/dist/public/assets
+COPY --from=builder /app/artifacts/modern-muse/public/robots.txt ./artifacts/modern-muse/dist/public/robots.txt
 COPY --from=builder /app/attached_assets ./attached_assets
 
 EXPOSE 8080
