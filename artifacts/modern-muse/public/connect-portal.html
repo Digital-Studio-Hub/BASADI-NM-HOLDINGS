@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Portal</title>
+    <link rel="stylesheet" href="/connect-suite.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <h1>Customer Portal</h1>
+        <p id="global-message" class="message hidden"></p>
+
+        <section id="view-login">
+          <h2>Log in</h2>
+          <p class="muted">Enter your email or phone to receive a one-time code.</p>
+          <div class="row">
+            <label class="field">
+              <span>Email</span>
+              <input id="login-email" type="email" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input id="login-phone" type="tel" autocomplete="tel" />
+            </label>
+          </div>
+          <button id="send-code-btn" class="btn" type="button">
+            <span id="send-code-spinner" class="spinner hidden"></span>
+            Send code
+          </button>
+        </section>
+
+        <section id="view-verify" class="hidden">
+          <h2>Verify code</h2>
+          <p id="verify-channel" class="muted"></p>
+          <label class="field" style="max-width: 220px">
+            <span>6-digit code</span>
+            <input id="otp-code" type="text" inputmode="numeric" maxlength="6" pattern="[0-9]*" autofocus />
+          </label>
+          <div class="row" style="align-items:center;">
+            <button id="verify-btn" class="btn" type="button">
+              <span id="verify-spinner" class="spinner hidden"></span>
+              Verify
+            </button>
+            <button id="resend-btn" class="btn link" type="button">Resend code</button>
+            <span id="resend-countdown" class="muted"></span>
+          </div>
+        </section>
+
+        <section id="view-dashboard" class="hidden">
+          <div class="row" style="justify-content:space-between;align-items:center;">
+            <h2 id="greeting">Welcome</h2>
+            <button id="logout-btn" class="btn secondary" type="button">Log out</button>
+          </div>
+
+          <h3>Recent Orders</h3>
+          <div style="overflow:auto;">
+            <table class="table" id="orders-table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <h3 style="margin-top:1rem;">Outstanding Invoices</h3>
+          <div style="overflow:auto;">
+            <table class="table" id="invoices-table">
+              <thead>
+                <tr>
+                  <th>Invoice</th>
+                  <th>Due date</th>
+                  <th>Status</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/connect-portal.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Catalogue</title>
+    <meta
+      name="description"
+      content="Browse our latest catalogue powered by lekker.network Connect API."
+    />
+    <link rel="stylesheet" href="/connect-catalogue.css" />
+  </head>
+  <body>
+    <main class="catalogue-shell">
+      <header class="catalogue-header">
+        <div class="brand-block">
+          <img
+            id="workspace-logo"
+            class="workspace-logo"
+            alt="Workspace logo"
+            hidden
+          />
+          <div>
+            <p class="eyebrow">Lekker Network Catalogue</p>
+            <h1 id="workspace-name">Products</h1>
+          </div>
+        </div>
+        <p id="workspace-meta" class="workspace-meta"></p>
+      </header>
+
+      <section id="delivery-banner" class="delivery-banner" hidden></section>
+
+      <section id="error-state" class="state-card" hidden>
+        <h2>Could not load products</h2>
+        <p id="error-message">
+          We are having trouble reaching the catalogue right now.
+        </p>
+        <button id="retry-button" type="button">Retry</button>
+      </section>
+
+      <section id="content-state" hidden>
+        <nav id="category-tabs" class="category-tabs" aria-label="Category filters"></nav>
+        <section
+          id="products-grid"
+          class="products-grid"
+          aria-live="polite"
+          aria-busy="false"
+        ></section>
+      </section>
+
+      <section id="loading-state" class="products-grid" aria-label="Loading products"></section>
+    </main>
+
+    <template id="product-card-template">
+      <article class="product-card">
+        <div class="image-wrap">
+          <img class="product-image" alt="" hidden />
+          <div class="image-placeholder" aria-hidden="true">No image</div>
+          <span class="stock-badge" hidden>Out of stock</span>
+        </div>
+        <div class="product-content">
+          <h3 class="product-name"></h3>
+          <p class="product-price"></p>
+        </div>
+      </article>
+    </template>
+
+    <script src="/connect-catalogue.js" defer></script>
+  </body>
+</html>

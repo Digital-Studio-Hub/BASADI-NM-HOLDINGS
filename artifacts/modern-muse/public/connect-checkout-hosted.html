@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout (Hosted Payment)</title>
+    <link rel="stylesheet" href="/connect-suite.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <h1>Checkout (Hosted PayLekker)</h1>
+        <div id="step-bar" class="step-bar"></div>
+        <p id="global-message" class="message hidden"></p>
+
+        <section id="step-cart">
+          <h2>Cart</h2>
+          <div id="product-grid" class="grid"></div>
+          <h3 style="margin-top:1rem;">Selected items</h3>
+          <div id="cart-items"></div>
+          <p id="cart-empty" class="muted">Your cart is empty.</p>
+          <div id="cart-subtotal" class="summary-row total"></div>
+          <button id="to-shipping-btn" class="btn" type="button">Proceed to checkout</button>
+        </section>
+
+        <section id="step-shipping" class="hidden">
+          <h2>Shipping</h2>
+          <p id="shipping-description" class="muted"></p>
+          <div id="shipping-address-form" class="row"></div>
+          <div id="shipping-actions" class="row" style="margin-top:.7rem;"></div>
+          <div id="shipping-options" style="margin-top:.7rem;"></div>
+          <div class="row" style="margin-top:1rem;">
+            <button id="back-to-cart-btn" class="btn secondary" type="button">Back</button>
+            <button id="to-customer-btn" class="btn" type="button">Continue</button>
+          </div>
+        </section>
+
+        <section id="step-customer" class="hidden">
+          <h2>Customer details</h2>
+          <div class="row">
+            <label class="field">
+              <span>Name *</span>
+              <input id="customer-name" autocomplete="name" />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input id="customer-email" type="email" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input id="customer-phone" type="tel" autocomplete="tel" />
+            </label>
+          </div>
+
+          <h3 style="margin-top:1rem;">Order summary</h3>
+          <div id="summary-box"></div>
+
+          <div class="row" style="margin-top:1rem;">
+            <button id="back-to-shipping-btn" class="btn secondary" type="button">Back</button>
+            <button id="pay-btn" class="btn" type="button">
+              <span id="pay-spinner" class="spinner hidden"></span>
+              Pay now
+            </button>
+          </div>
+        </section>
+
+        <section id="step-confirmation" class="hidden">
+          <h2>Thank you for your order!</h2>
+          <p id="confirmation-message"></p>
+          <div id="confirmation-summary"></div>
+
+          <div class="toggle" style="margin-top:1rem;">
+            <h3 style="margin-top:0;">Apply a gift card (optional)</h3>
+            <div class="row" style="align-items:flex-end;">
+              <label class="field">
+                <span>Gift card code</span>
+                <input id="redeem-code" placeholder="LKGC-XXXX-XXXX-XXXX" />
+              </label>
+              <button id="redeem-btn" class="btn" type="button">
+                <span id="redeem-spinner" class="spinner hidden"></span>
+                Apply gift card
+              </button>
+            </div>
+            <p id="redeem-message" class="message hidden"></p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/connect-checkout-hosted.js" defer></script>
+  </body>
+</html>

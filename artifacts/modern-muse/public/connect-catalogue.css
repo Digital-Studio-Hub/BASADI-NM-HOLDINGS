@@ -1,0 +1,266 @@
+:root {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --text: #141414;
+  --muted: #616161;
+  --border: #e4e4e4;
+  --accent: #111111;
+  --accent-text: #ffffff;
+  --danger: #b3261e;
+  --placeholder: #d8d8d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #fef8e8 0%, #f5f5f5 45%, #ececec 100%);
+  color: var(--text);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.catalogue-shell {
+  width: min(1200px, 92vw);
+  margin: 2rem auto 3rem;
+}
+
+.catalogue-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.workspace-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.74rem;
+}
+
+h1 {
+  margin: 0.2rem 0 0;
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2rem);
+}
+
+.workspace-meta {
+  margin: 0;
+  color: var(--muted);
+  align-self: center;
+}
+
+.delivery-banner {
+  margin: 1rem 0 1.3rem;
+  background: #161616;
+  color: #f3f3f3;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+}
+
+.state-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+}
+
+.state-card h2 {
+  margin: 0 0 0.5rem;
+}
+
+.state-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+#retry-button {
+  margin-top: 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#retry-button:hover {
+  opacity: 0.9;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1.1rem;
+}
+
+.category-tab {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.category-tab.is-active {
+  background: var(--accent);
+  color: var(--accent-text);
+  border-color: var(--accent);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.image-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: #f0f0f0;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #8a8a8a;
+  font-weight: 600;
+  background: linear-gradient(135deg, #efefef, #d8d8d8);
+}
+
+.stock-badge {
+  position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+  background: color-mix(in srgb, var(--danger) 90%, white 10%);
+  color: #fff;
+  padding: 0.28rem 0.54rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.product-content {
+  padding: 0.8rem;
+}
+
+.product-name {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
+.product-price {
+  margin: 0.45rem 0 0;
+  color: #313131;
+  font-weight: 700;
+}
+
+.skeleton-card {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.skeleton-media,
+.skeleton-line {
+  background: linear-gradient(90deg, #ececec 20%, #f6f6f6 50%, #ececec 80%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s linear infinite;
+}
+
+.skeleton-media {
+  aspect-ratio: 1 / 1;
+}
+
+.skeleton-body {
+  padding: 0.8rem;
+}
+
+.skeleton-line {
+  height: 0.82rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.skeleton-line.short {
+  width: 52%;
+}
+
+.empty-note {
+  grid-column: 1 / -1;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .catalogue-shell {
+    margin-top: 1.2rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

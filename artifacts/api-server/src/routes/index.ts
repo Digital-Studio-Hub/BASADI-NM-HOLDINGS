@@ -6,6 +6,7 @@ import collectionsRouter from "./collections";
 import homeRouter from "./home";
 import testimonialsRouter from "./testimonials";
 import leadsRouter from "./leads";
+import connectFeedRouter from "./connectFeed";
 
 const router: IRouter = Router();
 
@@ -16,5 +17,6 @@ router.use(collectionsRouter);
 router.use(homeRouter);
 router.use(testimonialsRouter);
 router.use(leadsRouter);
+router.use(connectFeedRouter);
 
 export default router;
