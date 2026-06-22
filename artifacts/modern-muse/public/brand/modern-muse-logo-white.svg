@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 240" role="img" aria-labelledby="title desc">
+  <title id="title">Modern Muse logo white</title>
+  <desc id="desc">Modern Muse wordmark with moon icon in white</desc>
+  <g fill="#FFFFFF">
+    <path d="M126 20c-30 0-54 24-54 54 0 22 13 42 33 50-8 3-17 5-25 5-39 0-70-31-70-70s31-70 70-70c21 0 41 10 54 27-3-1-6-1-8-1z" transform="translate(0 10)"/>
+    <circle cx="126" cy="84" r="38"/>
+    <text x="210" y="110" font-family="Georgia, Times New Roman, serif" font-size="78" letter-spacing="8">MODERN</text>
+    <text x="210" y="188" font-family="Georgia, Times New Roman, serif" font-size="78" letter-spacing="8">MUSE</text>
+    <line x1="210" y1="215" x2="342" y2="215" stroke="#FFFFFF" stroke-width="4"/>
+    <text x="360" y="224" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="5">ELEVATE YOUR STYLE</text>
+    <line x1="760" y1="215" x2="850" y2="215" stroke="#FFFFFF" stroke-width="4"/>
+  </g>
+</svg>

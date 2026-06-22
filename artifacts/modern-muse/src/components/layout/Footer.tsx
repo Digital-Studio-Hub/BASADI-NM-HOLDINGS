@@ -100,9 +100,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="order-1 md:order-1 flex flex-col items-center gap-2">
-            <Link to="/" className="hover:opacity-80 transition-opacity">
+            <Link href="/" className="hover:opacity-80 transition-opacity">
               <img 
-                src="/brand/modern-muse-logo-white.png" 
+                src="/brand/modern-muse-logo-white.svg" 
                 alt="Modern Muse" 
                 className="h-10 w-auto object-contain"
               />
